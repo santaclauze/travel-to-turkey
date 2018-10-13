@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-
 
 class LandingUnstyled extends Component {
 
@@ -12,23 +10,16 @@ class LandingUnstyled extends Component {
 	}
 
 	render() {
+		const { className } = this.props;
 		return (
-			<CarouselProvider
-				naturalSlideWidth={100}
-				naturalSlideHeight={125}
-				totalSlides={3}
-			>
-				<Slider>
-					<Slide index={0}>I am the first Slide.</Slide>
-					<Slide index={1}><img src="../../assets/img/landing.jpg" alt="test" /></Slide>
-					<Slide index={2}>	<img src="../../assets/img/landing2.jpg" alt="test" /></Slide>
-				</Slider>
-			</CarouselProvider>
+			<div className={className}>
+			</div>
 		)
 	}
 }
 const Landing = styled(LandingUnstyled)`
-
+	background-color: darkblue;
+	height: 500px;
 `;
 
 export default Landing;

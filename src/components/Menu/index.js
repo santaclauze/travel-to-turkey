@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Navbar from '@bootstrap-styled/v4/lib/Navbar';
 import Container from '@bootstrap-styled/v4/lib/Container';
@@ -10,7 +11,7 @@ import NavItem from '@bootstrap-styled/v4/lib/Nav/NavItem';
 import NavLink from '@bootstrap-styled/v4/lib/Nav/NavLink';
 import A from '@bootstrap-styled/v4/lib/A';
 
-class Menu extends Component {
+class MenuUnstyled extends Component {
 
 	state = {
 		isOpen: false,
@@ -23,8 +24,9 @@ class Menu extends Component {
 	};
 
 	render() {
+		const { className } = this.props;
 		return (
-			<Navbar color="faded" light toggleable="lg">
+			<Navbar className={className} color="faded" light toggleable="lg">
 				<Container>
 					<div className="d-flex justify-content-between">
 						<NavbarBrand tag={A} to="javascript:;">Brand</NavbarBrand>
@@ -51,5 +53,11 @@ class Menu extends Component {
 		)
 	}
 }
+
+const Menu = styled(MenuUnstyled)`
+	&.navbar {
+		z-index: 999;
+	}
+`;
 
 export default Menu;
