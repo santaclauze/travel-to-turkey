@@ -14,18 +14,18 @@ class ContactForm extends Component {
         return (
             <Form>
                 <FormGroup>
-                    <Label for="exampleEmail">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                    <Label for="exampleEmail" className="mb-0">Name</Label>
+                    <Input type="text" name="email" id="exampleEmail" />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleEmail">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                    <Label for="exampleEmail" className="mb-0">Email address</Label>
+                    <Input type="email" name="email" id="exampleEmail" />
                 </FormGroup>
                 <FormGroup>
-                    <Label for="exampleEmail">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                    <Label for="exampleEmail" className="mb-0">Message</Label>
+                    <Input type="textarea" name="message" id="message" rows={10} />
                 </FormGroup>
-                <Button>Click here</Button>
+                <Button className="w-100">Send Message</Button>
             </Form>
         )
     }

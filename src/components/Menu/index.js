@@ -26,10 +26,10 @@ class MenuUnstyled extends Component {
 	render() {
 		const { className } = this.props;
 		return (
-			<Navbar className={className} color="faded" light toggleable="lg">
+			<Navbar className={className} color="inverse" inverse toggleable="lg" fixed="top">
 				<Container>
 					<div className="d-flex justify-content-between">
-						<NavbarBrand tag={A} to="javascript:;">Brand</NavbarBrand>
+						<NavbarBrand tag={A} to="#">Brand</NavbarBrand>
 						<NavbarToggler onClick={this.handleClick} />
 					</div>
 					<Collapse navbar isOpen={this.state.isOpen}>
@@ -57,6 +57,8 @@ class MenuUnstyled extends Component {
 const Menu = styled(MenuUnstyled)`
 	&.navbar {
 		z-index: 999;
+		opacity: 0.7;
+		background-color: black;
 	}
 `;
 

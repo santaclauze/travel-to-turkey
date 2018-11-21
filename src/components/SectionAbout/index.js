@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 class SectionAboutUnstyled extends Component {
 
-    propTypes = {
+    static propTypes = {
         className: PropTypes.string,
     }
 

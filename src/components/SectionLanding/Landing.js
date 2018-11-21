@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import Carousel from './Carousel';
 
 class LandingUnstyled extends Component {
 
-	propTypes = {
+	static propTypes = {
 		className: PropTypes.string,
 	}
 
@@ -13,13 +13,17 @@ class LandingUnstyled extends Component {
 		const { className } = this.props;
 		return (
 			<div className={className}>
+				<Carousel />
 			</div>
 		)
 	}
 }
 const Landing = styled(LandingUnstyled)`
-	background-color: darkblue;
-	height: 500px;
+	img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+	}
 `;
 
 export default Landing;

@@ -5,7 +5,7 @@ import { mediaBreakpointUp } from '@bootstrap-styled/css-mixins/lib/breakpoints'
 
 class WrapperUnstyled extends Component {
 
-    propTypes = {
+    static propTypes = {
         className: PropTypes.string,
     }
 
@@ -24,7 +24,8 @@ ${(props) => `
       margin-left: auto;
       padding-left: 12px;
       padding-right: 12px;
-     
+     padding-top: 2rem;
+     padding-bottom: 2rem;
     
     ${mediaBreakpointUp(
         'sm',

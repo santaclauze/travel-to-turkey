@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import BootstrapProvider from '@bootstrap-styled/provider/lib/BootstrapProvider';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCocktail , faMosque, faSpa, faUmbrellaBeach, faPlus } from '@fortawesome/free-solid-svg-icons'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import theme from './theme';
 
 import Menu from './components/Menu';
@@ -21,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BootstrapProvider theme={theme}>
+        <BootstrapProvider theme={theme} reset injectGlobal>
             <Menu />
             <SectionLanding />
             <SectionOffer />

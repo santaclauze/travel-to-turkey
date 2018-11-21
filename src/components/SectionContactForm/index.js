@@ -7,7 +7,7 @@ import Wrapper from '../Wrapper';
 
 class SectionContactFormUnstyled extends Component {
 
-    propTypes = {
+    static propTypes = {
         className: PropTypes.string,
     }
 

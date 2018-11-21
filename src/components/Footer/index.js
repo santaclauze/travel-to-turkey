@@ -5,7 +5,7 @@ import FooterBs from '@bootstrap-styled/v4/lib/Footer';
 
 class FooterUnstyled extends Component {
 
-    propTypes = {
+    static propTypes = {
         className: PropTypes.string,
     }
 
